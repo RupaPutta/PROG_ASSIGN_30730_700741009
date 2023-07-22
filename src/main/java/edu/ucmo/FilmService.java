@@ -14,6 +14,10 @@ public class FilmService {
         return filmRepository.getAllFilms();
     }
 
+    public Film saveFilm(Film film) {
+        return filmRepository.save(film);
+    }
+
     public void deleteFilmById(Long film_id) {
         filmRepository.deleteById(film_id);
     }

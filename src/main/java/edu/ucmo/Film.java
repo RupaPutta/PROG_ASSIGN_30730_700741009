@@ -16,6 +16,8 @@ public class Film {
     private Integer length;
     private Double replacement_cost;
 
+    private String rating;
+
     public Long getFilm_id() {
         return film_id;
     }
@@ -70,5 +72,13 @@ public class Film {
 
     public void setReplacement_cost(Double replacement_cost) {
         this.replacement_cost = replacement_cost;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
     }
 }
