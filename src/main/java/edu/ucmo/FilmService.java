@@ -10,7 +10,7 @@ public class FilmService {
     @Autowired
     private FilmRepository filmRepository;
 
-    public List<Film> getAllFilms(){
+    public List<Film> getAllFilms() {
         return filmRepository.getAllFilms();
     }
 
@@ -18,7 +18,12 @@ public class FilmService {
         return filmRepository.save(film);
     }
 
-    public void deleteFilmById(Long film_id) {
-        filmRepository.deleteById(film_id);
+    public Film updateFilm(Film film) {
+        return filmRepository.updateFilmByTitleOrDescOrRating(film.getTitle(),
+                film.getDescription(), film.getRating());
+    }
+
+    public void deleteFilmByTitle(String title) {
+        filmRepository.deleteFilmByTitle(title);
     }
 }

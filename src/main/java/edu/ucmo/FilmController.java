@@ -23,12 +23,12 @@ public class FilmController {
 
     @PatchMapping("/film")
     public Film updateFilm(@RequestBody Film film) {
-        return filmService.saveFilm(film);
+        return filmService.updateFilm(film);
     }
 
-    @DeleteMapping("/{film_id}")
-    public String deleteFilmById(@PathVariable String film_id) {
-        filmService.deleteFilmById(Long.parseLong(film_id));
-        return "Film deleted successfully";
+    @DeleteMapping("/film/{title}")
+    public String deleteFilmByTitle(@PathVariable String title) {
+        filmService.deleteFilmByTitle(title);
+        return "Film deleted successfully with title as " + title;
     }
 }
