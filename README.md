@@ -14,4 +14,4 @@ singhirunnusorn@ucmo.edu
 1. Sri Sowmya Rupa Putta, SXP10090@UCMO.EDU, 700741009
 
 ## Project Status
-In Progress
+Active
