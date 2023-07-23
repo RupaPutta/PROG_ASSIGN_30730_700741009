@@ -4,6 +4,9 @@ import org.neo4j.ogm.annotation.GeneratedValue;
 import org.neo4j.ogm.annotation.Id;
 import org.neo4j.ogm.annotation.NodeEntity;
 
+/**
+ * @author Sri Sowmya Rupa Putta
+ */
 @NodeEntity
 public class Film {
     @Id
@@ -15,7 +18,6 @@ public class Film {
     private Double rental_rate;
     private Integer length;
     private Double replacement_cost;
-
     private String rating;
 
     public Long getFilm_id() {
@@ -81,4 +83,5 @@ public class Film {
     public void setRating(String rating) {
         this.rating = rating;
     }
+
 }

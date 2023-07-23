@@ -5,6 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author Sri Sowmya Rupa Putta
+ */
 @Service
 public class FilmService {
     @Autowired
@@ -25,5 +28,9 @@ public class FilmService {
 
     public void deleteFilmByTitle(String title) {
         filmRepository.deleteFilmByTitle(title);
+    }
+
+    public List<QueryResultObj> getFilmAndShowDetailsWithActorNames() {
+        return filmRepository.getFilmAndShowDetailsWithActorNames();
     }
 }
